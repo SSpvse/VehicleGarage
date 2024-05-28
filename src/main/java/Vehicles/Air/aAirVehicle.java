@@ -1,0 +1,61 @@
+package Vehicles.Air;
+
+import Parts.Engine.aEngine;
+import Parts.Steering.aSteering;
+import Parts.Wheels.aWheels;
+import Vehicles.aVehicle;
+
+public abstract class aAirVehicle extends aVehicle {
+
+
+
+    aEngine engine;
+    aWheels wheels;
+    aSteering steering;
+
+    //Constructors ==v
+
+    public aAirVehicle() {
+    }
+
+    public aAirVehicle(aEngine eng) {
+        super(eng);
+        this.engine = eng;
+    }
+
+    public aAirVehicle(String name, aWheels wheel, aEngine eng, aSteering steer) {
+        super(name, eng, steer);
+        this.engine = eng;
+        this.wheels = wheel;
+        this.steering = steer;
+    }
+
+
+    //Methods ==v
+
+    public void EngineStart() {
+        engine.StartEngine();
+        System.out.println(this.vehicleID);
+
+    }
+
+    public void EngineOff() {
+        engine.EngineOff();
+    }
+
+    ;
+
+    public void Accelerate() {
+        System.out.println("Accelerating the vehicle! ");
+    }
+
+    ;
+
+    public void Break() {
+        System.out.println("Breaking! ");
+    }
+
+    ;
+
+
+}
